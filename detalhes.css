@@ -1,0 +1,81 @@
+/* detalhes.css */
+
+#details-container {
+    display: none; /* Inicialmente oculto */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    position: fixed; /* Fixa no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adiciona rolagem se necessário */
+    z-index: 1000; /* Fica acima dos outros elementos */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.details-content {
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo para o conteúdo */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    position: relative; /* Permite o uso de posicionamento absoluto para a imagem */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.banner-container {
+    position: relative; /* Permite o posicionamento absoluto dentro deste contêiner */
+}
+
+.details-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 20px; /* Ajusta a distância do topo */
+    left: 20px; /* Ajusta a distância da esquerda */
+    width: 150px; /* Define o tamanho da imagem menor */
+    border-radius: 8px;
+}
+
+.movie-title {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.movie-overview {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.details-rating {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.rating-star {
+    color: gold; /* Cor das estrelas */
+}
+
+#back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Faz o botão ocupar a largura total disponível */
+    margin: 20px auto 0; /* Adiciona margem superior e centraliza */
+}
+
+#back-button:hover {
+    background-color: #777;
+}

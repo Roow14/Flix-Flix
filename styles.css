@@ -1,0 +1,144 @@
+/* Garante que o menu lateral fique visível e não seja afetado pelo modal */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Remove a rolagem global */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #000; /* Cor de fundo de fallback */
+    background-image: url('fundo.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: 800px 600px; /* Faz com que a imagem cubra toda a área */
+    background-position: 65%;  /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh; /* Altura completa da viewport */
+    background-color: rgba(51, 51, 51, 0.8); /* Cor de fundo com transparência para o menu lateral */
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Permite rolar o conteúdo do menu se necessário */
+    z-index: 100; /* Garante que o menu lateral fique acima do conteúdo principal */
+}
+
+.logo {
+    font-size: 2rem;
+    margin: 20px 0;
+    background: #fff;
+    width: 100%;
+    
+}
+.logo i {
+    position: relative;
+    left: 10%;
+    font-size: 25px;
+    color: #444;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px); /* Ajusta a largura do conteúdo principal */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência para o conteúdo */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Altura completa da viewport */
+    overflow-y: auto; /* Permite rolar o conteúdo se necessário */
+    text-align: center; /* Centraliza o texto dentro do conteúdo */
+    
+}
+.content p {
+    font-size: 30px;
+}
+
+.welcome-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#movies-container {
+    display: none; /* Inicialmente oculto */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+    gap: 10px; /* Espaçamento entre os filmes */
+    justify-content: center; /* Centraliza os filmes horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento ao redor do grid */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+    width: 100%; /* Preenche a largura do conteúdo */
+    height: 100%; /* Preenche a altura do conteúdo */
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Ajusta a largura do item para preencher a coluna */
+    max-width: 120px; /* Ajusta o máximo da largura do item para não ultrapassar */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+}
+
+.movie img {
+    width: 150%;
+    border-radius: 5px;
+}
+.movie h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff; /* Define a cor branca para o nome do filme */
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+}
+
+.rating{
+    position: absolute;
+    top: 7px;
+    right: -26px; /* Ajuste a posição para dentro do contêiner */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: #ffd700; /* Cor da estrela e números */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem; /* Tamanho da fonte para a estrela e números */
+    display: flex;
+    align-items: center;
+}
